@@ -1,4 +1,4 @@
-const mongoose= require('mongoose');
+const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
   first_name: String,
@@ -8,7 +8,6 @@ const userSchema = new mongoose.Schema({
   email: { type: String, unique: true },
   aadhar_no: String,
   address: String
-
 });
 
-module.exports = mongoose.models.User || mongoose.model('User', userSchema);
+module.exports = mongoose.model('User', userSchema);
